@@ -1,0 +1,37 @@
+File: result.txt
+Author(s) names AND netid's: Haikun Liu(hlg483)
+Date: 06.06.2016
+Statement: I worked individually on this project and all work is my own.
+
+
++------------+----------+-----------------+------------------+----------------+
+| Feature    | length   | boundingBoxArea | boundingBoxRatio | sumOfCurvature |
++------------+----------+-----------------+------------------+----------------+
+| contOrDisc | discrete | discrete        | discrete         | discrete       |
++------------+----------+-----------------+------------------+----------------+
+| thresholds | 368      | 93000           | 0.2              | .000005        |
++------------+----------+-----------------+------------------+----------------+
+
+Each threshold was determined by iteratively running the program with a range of preset threshold values and choosing the optimized one with the best confusion matrix. The parameters used in sumOfCurvature() were lambda x: math.fabs(x) and skip = 9. 
+
+For the performance evaluation, all the files in trainingFiles were used for training and testing
++--------------------------+
+| Basic Classifier         |
++--------------------------+
+|         | text | drawing |
++---------+------+---------+
+| text    | 395  | 346     |
++---------+------+---------+
+| drawing | 349  | 925     |
++---------+------+---------+
+
++--------------------------+
+| Best Classifier          |
++--------------------------+
+|         | text | drawing |
++---------+------+---------+
+| text    | 494  | 247     |
++---------+------+---------+
+| drawing | 274  | 1000    |
++---------+------+---------+
+
